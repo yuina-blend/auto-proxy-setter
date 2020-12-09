@@ -17,5 +17,4 @@ else
     export -n https_proxy
     git config --global --unset http.proxy
     git config --global --unset https.proxy
-    unalias apt
 fi
