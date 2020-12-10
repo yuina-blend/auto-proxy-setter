@@ -13,8 +13,8 @@ if [ `echo ${NAME##*ESSID:} | grep ${SSID}` ];then
     git config --global https.proxy ${https_proxy}
     alias apt='apt -o Acquire::http::proxy="${http_proxy}"'
 else
-    export -n http_proxy
-    export -n https_proxy
+    unset http_proxy
+    unset https_proxy
     git config --global --unset http.proxy
     git config --global --unset https.proxy
 fi
